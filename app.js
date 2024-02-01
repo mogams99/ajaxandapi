@@ -22,14 +22,38 @@
 //     }
 // }`;
 
-const req = new XMLHttpRequest();
-let data;
-req.onload = function () {
-    data = JSON.parse(this.response)
-    console.log(data);
-};
-req.onerror = function () {
-    console.error('message: ', this);
-};
-req.open('GET', 'https://swapi.dev/api/people/18');
-req.send();
+// const req = new XMLHttpRequest();
+// let data;
+// req.onload = function () {
+//     data = JSON.parse(this.response)
+//     console.log(data);
+// };
+// req.onerror = function () {
+//     console.error('message: ', this);
+// };
+// req.open('GET', 'https://swapi.dev/api/people/18');
+// req.send();
+
+// fetch('https://swapi.dev/api/people/18')
+//     .then((res) => {
+//         if (!res.ok) {
+//             throw Error('Could not fetch the data for that resource');
+//         }
+//         console.log(res);
+//         return res.json();
+//     }).then((data) => {
+//         console.log('json: ', data);
+//     }).catch((err) => {
+//         console.error('error: ', err);
+//     });
+
+// const loadPeople = async () => {
+//     try {
+//         const res = await fetch('https://swapi.dev/api/people/1');
+//         const data = await res.json();
+//         console.warn('data: ', data);
+//     } catch (error) {
+//         console.error('message: ', error);
+//     }
+// }
+// loadPeople();
