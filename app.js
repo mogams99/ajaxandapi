@@ -1,3 +1,4 @@
+// ! structure data of json
 // const data = `{
 //     "success": true,
 //     "terms": "https://coinlayer.com/terms",
@@ -22,6 +23,7 @@
 //     }
 // }`;
 
+// ! simple concept of xml http request
 // const req = new XMLHttpRequest();
 // let data;
 // req.onload = function () {
@@ -34,6 +36,7 @@
 // req.open('GET', 'https://swapi.dev/api/people/18');
 // req.send();
 
+// ! simple concept of fetch
 // fetch('https://swapi.dev/api/people/18')
 //     .then((res) => {
 //         if (!res.ok) {
@@ -46,7 +49,7 @@
 //     }).catch((err) => {
 //         console.error('error: ', err);
 //     });
-
+// ! merge concept of async await and fetch
 // const loadPeople = async () => {
 //     try {
 //         const res = await fetch('https://swapi.dev/api/people/1');
@@ -57,3 +60,22 @@
 //     }
 // }
 // loadPeople();
+
+// ! simple concept of axios library
+// axios.get('https://swapi.dev/api/people/1').then((res) => {
+//     console.warn(res.data);
+// }).catch((err) => {
+//     console.error(err.message);
+// });
+// ! simple implementation of axios logic
+// const getPeople = async (id) => {
+//     try {
+//         const res = await axios.get(`https://swapi.dev/api/people/${id}`);
+//         console.log(res.data);
+//     } catch (error) {
+//         console.error(error);
+//         console.error(error.message);
+//         console.error(error.response.status);
+//         console.error(error.response.data);
+//     }
+// }
