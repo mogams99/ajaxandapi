@@ -80,26 +80,49 @@
 //     }
 // }
 
-// ! praktik get api bapack bapack2
-const jokes = document.querySelector('#jokes');
-const button = document.querySelector('button');
-const addJoke = async () => {
-    const jokeText = await getJokes();
-    const newLI = document.createElement('LI');
-    newLI.append(jokeText);
-    jokes.append(newLI);
-}
-const getJokes = async () => {
-    try {
-        const config = {
-            headers: {
-                Accept: 'application/json',
-            }
-        };
-        const res = await axios.get('https://icanhazdadjoke.com/', config);
-        return res.data.joke;
-    } catch (error) {
-        return "No Jokes Available!";
-    }
-}
-button.addEventListener('click', addJoke);
+// ! implementation api getter icanhazdadjoke
+// const jokes = document.querySelector('#jokes');
+// const button = document.querySelector('button');
+// const addJoke = async () => {
+//     const jokeText = await getJokes();
+//     const newLI = document.createElement('LI');
+//     newLI.append(jokeText);
+//     jokes.append(newLI);
+// }
+// const getJokes = async () => {
+//     try {
+//         const config = {
+//             headers: {
+//                 Accept: 'application/json',
+//             }
+//         };
+//         const res = await axios.get('https://icanhazdadjoke.com/', config);
+//         return res.data.joke;
+//     } catch (error) {
+//         return "No Jokes Available!";
+//     }
+// }
+// button.addEventListener('click', addJoke);
+
+// ! implemetation case getter api tvmaze
+// const form = document.querySelector('#search-form');
+// form.addEventListener('submit', async (e) => {
+//     e.preventDefault();
+//     document.querySelectorAll('img').forEach((img) => img.remove());
+//     const keyword = form.elements.query.value;
+//     const config = {
+//         params: { q: keyword },
+//     };
+//     const res = await axios.get('https://api.tvmaze.com/search/shows', config);
+//     getImages(res.data);
+//     form.elements.query.value = '';
+// });
+// const getImages = (shows) => {
+//     for(let result of shows) {
+//         if (result.show.image) {
+//             const img = document.createElement('img');
+//             img.src = result.show.image.medium;
+//             document.body.append(img);
+//         }
+//     }
+// }
